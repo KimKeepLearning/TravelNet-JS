@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <img class="item-img" :src="item.imgUrl" alt="">
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1608/25/2526fbbad058cd56a3.water.jpg_200x200_00886323.jpg',
-        title: '环岛路帆船出海',
-        desc: '浪漫厦门，浪漫的帆船游行'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1608/25/2526fbbad058cd56a3.water.jpg_200x200_00886323.jpg',
-        title: '环岛路帆船出海',
-        desc: '浪漫厦门，浪漫的帆船游行'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1608/25/2526fbbad058cd56a3.water.jpg_200x200_00886323.jpg',
-        title: '环岛路帆船出海',
-        desc: '浪漫厦门，浪漫的帆船游行'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
